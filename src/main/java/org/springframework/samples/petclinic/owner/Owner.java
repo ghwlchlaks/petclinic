@@ -28,6 +28,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PropertyComparator;
@@ -55,8 +56,8 @@ public class Owner extends Person {
 	private String city;
 
 	@Column(name = "age")
-	@NotEmpty
-	private int age;
+	@NotNull
+	private Integer age;
 
 	@Column(name = "telephone")
 	@NotEmpty
@@ -77,7 +78,17 @@ public class Owner extends Person {
 	public String getCity() {
 		return this.city;
 	}
+	public Integer getAge() {
+		return age;
+	}
 
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	public void setPets(Set<Pet> pets) {
+		this.pets = pets;
+	}
 	public void setCity(String city) {
 		this.city = city;
 	}
@@ -88,14 +99,6 @@ public class Owner extends Person {
 
 	public void setTelephone(String telephone) {
 		this.telephone = telephone;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
 	}
 
 	protected Set<Pet> getPetsInternal() {
