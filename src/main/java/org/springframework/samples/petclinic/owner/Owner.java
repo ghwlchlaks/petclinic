@@ -78,6 +78,7 @@ public class Owner extends Person {
 	public String getCity() {
 		return this.city;
 	}
+
 	public Integer getAge() {
 		return age;
 	}
@@ -89,6 +90,7 @@ public class Owner extends Person {
 	public void setPets(Set<Pet> pets) {
 		this.pets = pets;
 	}
+
 	public void setCity(String city) {
 		this.city = city;
 	}

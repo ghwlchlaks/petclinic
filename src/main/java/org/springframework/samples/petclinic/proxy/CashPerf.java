@@ -3,7 +3,7 @@ package org.springframework.samples.petclinic.proxy;
 import org.springframework.util.StopWatch;
 
 //proxy class (성능측정을 위해)
-public class CashPerf implements Payment{
+public class CashPerf implements Payment {
 
 	Payment cash = new Cash();
 
@@ -18,4 +18,5 @@ public class CashPerf implements Payment{
 		System.out.println(stopWatch.prettyPrint());
 
 	}
+
 }

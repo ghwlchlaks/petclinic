@@ -12,4 +12,5 @@ class StoreTest {
 		Store store = new Store(cashPerf);
 		store.buySomething(50);
 	}
+
 }
